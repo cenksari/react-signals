@@ -15,9 +15,9 @@ effect(() => {
 });
 
 export const completedTodos: ReadonlySignal<ITodo[]> = computed(
-  () => todosSignal.value.filter((todo: ITodo) => todo.isDone),
+  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === true),
 );
 
 export const uncompletedTodos: ReadonlySignal<ITodo[]> = computed(
-  () => todosSignal.value.filter((todo: ITodo) => !todo.isDone),
+  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === false),
 );
