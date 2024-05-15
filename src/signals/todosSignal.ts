@@ -1,4 +1,4 @@
-import { type Signal, computed, effect, ReadonlySignal, signal } from '@preact/signals-react';
+import { type Signal, type ReadonlySignal, computed, effect, signal } from '@preact/signals-react';
 
 import { getTodosFromLocalStorage, setTodosLocalStorage } from '../tools/storage';
 
