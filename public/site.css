@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-size: 1.05em;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+p, h1 {
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+input, button {
+  padding: 10px;
+}
+
+input {
+  border-right: none;
+  border: 1px solid #dadada;
+}
+
+input::placeholder {
+  user-select: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-v-center {
+  justify-content: center;
+}
+
+.flex-h-center {
+  align-items: center;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.todos {
+  margin-bottom: 40px;
+}
+
+.todo {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 40px;
+}
