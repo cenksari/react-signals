@@ -14,7 +14,7 @@ const TodoForm = (): React.JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = e.target;
 
-    setValues({ id: uuidv4(), name: value, isDone: false });
+    setValues({ id: uuidv4(), name: value.trim(), isDone: false });
   };
 
   const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
@@ -49,7 +49,7 @@ const TodoForm = (): React.JSX.Element => {
               onChange={handleChange}
               placeholder='Add new todo'
             />
-            <button type='submit'>Add</button>
+            <button type='submit' tabIndex={1}>Add</button>
           </div>
       </form>
     </div>
