@@ -2,23 +2,27 @@ import React from 'react';
 
 import { useSignals } from "@preact/signals-react/runtime";
 
+import Header from './components/Header';
+import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
-import { todosSignal } from './signals/todosSignal';
+import { completedTodos, uncompletedTodos } from './signals/todosSignal';
 
 const App = (): React.JSX.Element => {
   useSignals();
 
   return (
     <div className='container flex flex-col flex-v-center'>
+      <Header />
+
       <TodoForm />
 
-      <h1>Not completed</h1>
-      <TodoList todos={todosSignal.value.filter((todo: any) => todo.isDone === false)} />
+      <TodoList title='Not completed' todos={completedTodos.value} />
 
-      <h1>Completed</h1>
-      <TodoList todos={todosSignal.value.filter((todo: any) => todo.isDone === true)} />
+      <TodoList title='Completed' todos={uncompletedTodos.value} />
+
+      <Footer />
     </div>
   );
 };

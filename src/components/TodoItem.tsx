@@ -1,12 +1,17 @@
 import React from 'react';
 
-import { todosSignal } from '../signals/todosSignal';
+import { type ITodo, todosSignal } from '../signals/todosSignal';
 
-const TodoItem = ({ todo }: any): React.JSX.Element => {
-  const handleOnChange = (e: any) => {
+interface IProps {
+  key: string;
+  todo: ITodo;
+}
+
+const TodoItem = ({ todo }: IProps): React.JSX.Element => {
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { checked } = e.target;
 
-    todosSignal.value = todosSignal.value.map((t: any) => {
+    todosSignal.value = todosSignal.value.map((t: ITodo) => {
       if (t.id === todo.id) {
         return {
           ...t,
@@ -21,13 +26,16 @@ const TodoItem = ({ todo }: any): React.JSX.Element => {
   return (
     <div className='flex flex-h-center todo'>
       <div className='checkbox'>
-        <input type='checkbox' checked={todo.isDone} onChange={handleOnChange} />
-      </div>
-      <div className='flex-grow'>
-        {todo.name}
+        <div className='radio-container flex flex-v-center'>
+          <label className='radio blue'>
+            <input type='checkbox' name={todo.id} id={todo.id} checked={todo.isDone} onChange={handleOnChange} />
+            <span className='slider round flex flex-v-center flex-h-center' />
+          </label>
+          <span className='radio-description'>{todo.name}</span>
+        </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default TodoItem;

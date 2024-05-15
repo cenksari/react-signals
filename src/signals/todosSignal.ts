@@ -14,10 +14,10 @@ effect(() => {
   setTodosLocalStorage(todosSignal.value);
 });
 
-export const completedTodoCount = computed(
-  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === true).length,
+export const completedTodos = computed(
+  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === true),
 );
 
-export const ongoingTodoCount = computed(
-  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === false).length,
+export const uncompletedTodos = computed(
+  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === false),
 );

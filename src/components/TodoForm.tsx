@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type FormEvent } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -11,7 +11,7 @@ const TodoForm = (): React.JSX.Element => {
     isDone: false,
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = e.target;
 
     setValues({
@@ -21,10 +21,10 @@ const TodoForm = (): React.JSX.Element => {
     });
   };
 
-  const handleAddTodo = (e: any) => {
+  const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    const todo = {
+    const todo: ITodo = {
       id: values.id,
       name: values.name,
       isDone: values.isDone,
@@ -37,22 +37,28 @@ const TodoForm = (): React.JSX.Element => {
 
   return (
     <div className='form'>
-      <form onSubmit={handleAddTodo} className='flex flex-space-between'>
-        <input
-          required
-          type='text'
-          name='todo'
-          tabIndex={0}
-          autoComplete='off'
-          className='flex-grow'
-          onChange={handleChange}
-          placeholder='Add new todo'
-        />
-        <button
-          type='submit'
-        >
-          Add todo
-        </button>
+      <form onSubmit={handleAddTodo}>
+          <div>
+            <label htmlFor='todo'>Todo text</label>
+          </div>
+          <div className='flex flex-space-between'>
+            <input
+              required
+              id='todo'
+              type='text'
+              name='todo'
+              tabIndex={0}
+              autoComplete='off'
+              className='flex-grow'
+              onChange={handleChange}
+              placeholder='Add new todo'
+            />
+            <button
+              type='submit'
+            >
+              Add
+            </button>
+          </div>
       </form>
     </div>
   );
