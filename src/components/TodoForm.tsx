@@ -22,15 +22,19 @@ const TodoForm = (): React.JSX.Element => {
   const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    const todo: ITodo = {
-      id: values.id,
-      name: values.name.trim(),
-      isDone: values.isDone,
-    };
+    const { id, name, isDone } = values;
 
-    setValues({ id: '', name: '', isDone: false });
-
-    updateTodosSignal([todo, ...todosSignal.value]);
+    if (name.trim() !== '') {
+      const todo: ITodo = {
+        id,
+        name,
+        isDone,
+      };
+  
+      setValues({ id: '', name: '', isDone: false });
+  
+      updateTodosSignal([todo, ...todosSignal.value]);
+    }
   };
 
   return (
