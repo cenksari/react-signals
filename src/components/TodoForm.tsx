@@ -16,7 +16,7 @@ const TodoForm = (): React.JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { value } = e.target;
 
-    setValues({ id: uuidv4(), name: value.trim(), isDone: false });
+    setValues({ id: uuidv4(), name: value, isDone: false });
   };
 
   const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
@@ -24,7 +24,7 @@ const TodoForm = (): React.JSX.Element => {
 
     const todo: ITodo = {
       id: values.id,
-      name: values.name,
+      name: values.name.trim(),
       isDone: values.isDone,
     };
 
@@ -47,6 +47,7 @@ const TodoForm = (): React.JSX.Element => {
               name='todo'
               tabIndex={0}
               autoComplete='off'
+              value={values.name}
               className='flex-grow'
               onChange={handleChange}
               placeholder='Add new todo'

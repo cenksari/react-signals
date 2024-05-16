@@ -1,25 +1,37 @@
 import React from 'react';
 
+import { useSignals } from '@preact/signals-react/runtime';
+
 import TodoItem from './TodoItem';
 
-import { type ITodo } from '../signals/todosSignal';
+import { type ITodo, completedTodos, uncompletedTodos } from '../signals/todosSignal';
 
 interface IProps {
   title: string;
-  todos: ITodo[];
+  todos: string;
 }
 
 const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
+  useSignals();
+
   console.log('TodoList rendered with title', title);
+
+  const getTodos = (): ITodo[] => {
+    if (todos === 'completed') {
+      return completedTodos.value;
+    } else {
+      return uncompletedTodos.value;
+    }
+  };
 
   return (
     <>
       <h1>{title}</h1>
       <div className='todos'>
-        {todos.length > 0 ? todos.map((todo: ITodo, index: number): React.JSX.Element => (
+        {getTodos().length > 0 ? getTodos().map((todo: ITodo, index: number): React.JSX.Element => (
           <TodoItem todo={todo} key={index.toString()} />
         )) : (
-          <p>No todos!</p>
+          <p>No todos found in {title.toLowerCase()} todos!</p>
         )}
       </div>
     </>

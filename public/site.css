@@ -51,6 +51,7 @@ input, button {
 }
 
 input {
+  font-size: 1em;
   border-right: none;
   border: 1px solid #dadada;
 }
