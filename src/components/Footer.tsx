@@ -1,5 +1,11 @@
 import React from 'react'
 
-const Footer = (): React.JSX.Element => <footer>React Signals</footer>;
+const Footer = (): React.JSX.Element => {
+  console.log('Footer rendered');
+
+  return (
+    <footer>React Signals</footer>
+  );
+};
 
 export default Footer;

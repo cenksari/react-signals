@@ -2,9 +2,11 @@ import React, { type FormEvent } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { todosSignal, type ITodo } from '../signals/todosSignal';
+import { type ITodo, todosSignal, updateTodosSignal } from '../signals/todosSignal';
 
 const TodoForm = (): React.JSX.Element => {
+  console.log('TodoForm rendered');
+
   const [values, setValues] = React.useState<ITodo>({
     id: '',
     name: '',
@@ -28,7 +30,7 @@ const TodoForm = (): React.JSX.Element => {
 
     setValues({ id: '', name: '', isDone: false });
 
-    todosSignal.value = [todo, ...todosSignal.value];
+    updateTodosSignal([todo, ...todosSignal.value]);
   };
 
   return (

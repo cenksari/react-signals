@@ -12,15 +12,17 @@ import { completedTodos, uncompletedTodos } from './signals/todosSignal';
 const App = (): React.JSX.Element => {
   useSignals();
 
+  console.log('App rendered');
+
   return (
     <div className='container flex flex-col flex-v-center'>
       <Header />
 
       <TodoForm />
 
-      <TodoList title='Not completed' todos={completedTodos.value} />
+      <TodoList title='Not completed' todos={uncompletedTodos.value} />
 
-      <TodoList title='Completed' todos={uncompletedTodos.value} />
+      <TodoList title='Completed' todos={completedTodos.value} />
 
       <Footer />
     </div>

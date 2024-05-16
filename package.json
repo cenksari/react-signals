@@ -13,13 +13,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
-  "babel": {
-    "plugins": [
-      [
-        "module:@preact/signals-react-transform"
-      ]
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app"

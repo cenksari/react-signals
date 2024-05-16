@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { type ITodo, todosSignal } from '../signals/todosSignal';
+import { type ITodo, changeTodosSignal } from '../signals/todosSignal';
 
 interface IProps {
   key: string;
@@ -8,19 +8,12 @@ interface IProps {
 }
 
 const TodoItem = ({ todo }: IProps): React.JSX.Element => {
+  console.log('TodoItem rendered with todo', todo);
+
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { checked } = e.target;
 
-    todosSignal.value = todosSignal.value.map((t: ITodo) => {
-      if (t.id === todo.id) {
-        return {
-          ...t,
-          isDone: checked,
-        };
-      }
-
-      return t;
-    });
+    changeTodosSignal(todo, checked);
   };
 
   return (
