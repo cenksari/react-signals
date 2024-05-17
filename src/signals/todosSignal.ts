@@ -19,16 +19,9 @@ export const updateTodosSignal = (todos: ITodo[]): void => {
 };
 
 export const changeTodosSignal = (todo: ITodo, checked: boolean): void => {
-  todosSignal.value = todosSignal.value.map((t: ITodo) => {
-    if (t.id === todo.id) {
-      return {
-        ...t,
-        isDone: checked,
-      };
-    }
-
-    return t;
-  });
+  todosSignal.value = todosSignal.value.map((t: ITodo) =>
+    t.id === todo.id ? { ...t, isDone: checked } : t
+  );
 };
 
 export const completedTodos: ReadonlySignal<ITodo[]> = computed(

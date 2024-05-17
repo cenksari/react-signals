@@ -16,13 +16,8 @@ const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
 
   console.log('TodoList rendered with title', title);
 
-  const getTodos = (): ITodo[] => {
-    if (todos === 'completed') {
-      return completedTodos.value;
-    } else {
-      return uncompletedTodos.value;
-    }
-  };
+  const getTodos = (): ITodo[] =>
+      todos === 'completed' ? completedTodos.value : uncompletedTodos.value;
 
   return (
     <>

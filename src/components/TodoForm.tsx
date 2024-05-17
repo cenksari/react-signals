@@ -14,21 +14,19 @@ const TodoForm = (): React.JSX.Element => {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const { value } = e.target;
-
-    setValues({ id: uuidv4(), name: value, isDone: false });
+    setValues({ ...values, name: e.target.value });
   };
 
   const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
-    const { id, name, isDone } = values;
+    const { name } = values;
 
     if (name.trim() !== '') {
       const todo: ITodo = {
-        id,
         name,
-        isDone,
+        id: uuidv4(),
+        isDone: false,
       };
   
       setValues({ id: '', name: '', isDone: false });

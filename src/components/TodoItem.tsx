@@ -11,9 +11,7 @@ const TodoItem = ({ todo }: IProps): React.JSX.Element => {
   console.log('TodoItem rendered with todo', todo);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const { checked } = e.target;
-
-    changeTodosSignal(todo, checked);
+    changeTodosSignal(todo, e.target.checked);
   };
 
   return (
