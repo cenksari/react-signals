@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -29,8 +32,21 @@ footer {
 }
 
 p, h1 {
+  line-height: 160%;
   user-select: none;
   margin-bottom: 15px;
+  --webkit-user-select: none;
+}
+
+input {
+  padding: 10px;
+  font-size: 0.9em;
+  border-right: none;
+  border: 1px solid #dadada;
+}
+
+input::placeholder {
+  user-select: none;
   --webkit-user-select: none;
 }
 
@@ -47,18 +63,7 @@ button {
 }
 
 input, button {
-  padding: 10px;
-}
-
-input {
-  font-size: 1em;
-  border-right: none;
-  border: 1px solid #dadada;
-}
-
-input::placeholder {
-  user-select: none;
-  --webkit-user-select: none;
+  height: 47px;
 }
 
 label {
@@ -116,12 +121,12 @@ label {
 }
 
 .todos {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .todo {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #dadada;
 }
 
@@ -144,11 +149,8 @@ label {
   opacity: 0;
 }
 
-.radio-container {
-  display: inline-block;
-}
-
 .radio-description {
+  font-size: 0.9em;
   margin-left: 10px;
 }
 
@@ -160,7 +162,7 @@ label {
   cursor: pointer;
   transition: 0.4s;
   position: absolute;
-  background-color: #cccccc;
+  background-color: #dadada;
 }
 
 .radio .slider:before {
@@ -178,8 +180,8 @@ label {
 }
 
 .radio input:checked + .slider:before {
-  font-size: 2em;
+  content: '\e876';
+  font-size: 0.8em;
   color: #ffffff;
-  content: '\2022';
-  margin-top: -8px;
+  font-family: 'Material Symbols Outlined';
 }
