@@ -1,6 +1,6 @@
 import { type Signal, type ReadonlySignal, computed, effect, signal } from '@preact/signals-react';
 
-import { getTodosFromLocalStorage, setTodosLocalStorage } from '../tools/storage';
+import { getTodosFromLocalStorage, setTodosLocalStorage } from '../utils/storage';
 
 export interface ITodo {
   id: string;
