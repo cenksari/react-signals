@@ -28,9 +28,9 @@ const TodoForm = (): React.JSX.Element => {
         id: uuidv4(),
         isDone: false,
       };
-  
+
       setValues({ id: '', name: '', isDone: false });
-  
+
       updateTodosSignal([todo, ...todosSignal.value]);
     }
   };
@@ -38,24 +38,26 @@ const TodoForm = (): React.JSX.Element => {
   return (
     <div className='form'>
       <form onSubmit={handleAddTodo}>
-          <div>
-            <label htmlFor='todo'>Todo text</label>
-          </div>
-          <div className='flex flex-space-between'>
-            <input
-              required
-              id='todo'
-              type='text'
-              name='todo'
-              tabIndex={0}
-              autoComplete='off'
-              value={values.name}
-              className='flex-grow'
-              onChange={handleChange}
-              placeholder='Add new todo'
-            />
-            <button type='submit' tabIndex={1}>Add</button>
-          </div>
+        <div>
+          <label htmlFor='todo'>Todo text</label>
+        </div>
+        <div className='flex flex-space-between'>
+          <input
+            required
+            id='todo'
+            type='text'
+            name='todo'
+            tabIndex={0}
+            autoComplete='off'
+            value={values.name}
+            className='flex-grow'
+            onChange={handleChange}
+            placeholder='Add new todo'
+          />
+          <button type='submit' tabIndex={1}>
+            Add
+          </button>
+        </div>
       </form>
     </div>
   );

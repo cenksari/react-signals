@@ -17,15 +17,19 @@ const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
   console.log('TodoList rendered with title', title);
 
   const getTodos = (): ITodo[] =>
-      todos === 'completed' ? completedTodos.value : uncompletedTodos.value;
+    todos === 'completed' ? completedTodos.value : uncompletedTodos.value;
 
   return (
     <>
       <h1>{title}</h1>
       <div className='todos'>
-        {getTodos().length > 0 ? getTodos().map((todo: ITodo, index: number): React.JSX.Element => (
-          <TodoItem todo={todo} key={index.toString()} />
-        )) : (
+        {getTodos().length > 0 ? (
+          getTodos().map(
+            (todo: ITodo, index: number): React.JSX.Element => (
+              <TodoItem todo={todo} key={index.toString()} />
+            )
+          )
+        ) : (
           <p>No todos found in {title.toLowerCase()} todos!</p>
         )}
       </div>

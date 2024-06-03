@@ -1,4 +1,4 @@
-import { type ITodo } from "../signals/todosSignal";
+import { type ITodo } from '../signals/todosSignal';
 
 export const getTodosFromLocalStorage = (): ITodo[] => {
   const todos = localStorage.getItem('todos');

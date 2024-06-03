@@ -3,7 +3,6 @@ import React from 'react';
 import { type ITodo, changeTodosSignal } from '../signals/todosSignal';
 
 interface IProps {
-  key: string;
   todo: ITodo;
 }
 
@@ -19,7 +18,13 @@ const TodoItem = ({ todo }: IProps): React.JSX.Element => {
       <div className='checkbox'>
         <div className='radio-container flex flex-v-center'>
           <label className='radio blue'>
-            <input type='checkbox' name={todo.id} id={todo.id} checked={todo.isDone} onChange={handleOnChange} />
+            <input
+              type='checkbox'
+              name={todo.id}
+              id={todo.id}
+              checked={todo.isDone}
+              onChange={handleOnChange}
+            />
             <span className='slider round flex flex-v-center flex-h-center' />
           </label>
           <span className='radio-description'>{todo.name}</span>

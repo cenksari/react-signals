@@ -24,10 +24,10 @@ export const changeTodosSignal = (todo: ITodo, checked: boolean): void => {
   );
 };
 
-export const completedTodos: ReadonlySignal<ITodo[]> = computed(
-  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === true),
+export const completedTodos: ReadonlySignal<ITodo[]> = computed(() =>
+  todosSignal.value.filter((todo: ITodo) => todo.isDone === true)
 );
 
-export const uncompletedTodos: ReadonlySignal<ITodo[]> = computed(
-  () => todosSignal.value.filter((todo: ITodo) => todo.isDone === false),
+export const uncompletedTodos: ReadonlySignal<ITodo[]> = computed(() =>
+  todosSignal.value.filter((todo: ITodo) => todo.isDone === false)
 );
