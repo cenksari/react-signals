@@ -24,11 +24,7 @@ const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
       <h1>{title}</h1>
       <div className='todos'>
         {getTodos().length > 0 ? (
-          getTodos().map(
-            (todo: ITodo, index: number): React.JSX.Element => (
-              <TodoItem todo={todo} key={index.toString()} />
-            )
-          )
+          getTodos().map((todo: ITodo): React.JSX.Element => <TodoItem todo={todo} key={todo.id} />)
         ) : (
           <p>No todos found in {title.toLowerCase()} todos!</p>
         )}

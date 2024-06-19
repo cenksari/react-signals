@@ -3,29 +3,20 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   extends: [
     'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
-  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['@typescript-eslint/eslint-plugin', 'react', 'react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     semi: 'error',
     'no-console': 'off',

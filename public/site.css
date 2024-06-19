@@ -10,7 +10,8 @@
   font-family: Montserrat;
 }
 
-header, footer {
+header,
+footer {
   user-select: none;
   --webkit-user-select: none;
 }
@@ -31,7 +32,8 @@ footer {
   text-align: center;
 }
 
-p, h1 {
+p,
+h1 {
   line-height: 160%;
   user-select: none;
   margin-bottom: 15px;
@@ -62,7 +64,8 @@ button {
   background-color: #0a56ea;
 }
 
-input, button {
+input,
+button {
   height: 47px;
 }
 
