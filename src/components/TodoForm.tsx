@@ -54,7 +54,7 @@ const TodoForm = (): React.JSX.Element => {
             onChange={handleChange}
             placeholder='Add new todo'
           />
-          <button type='submit' tabIndex={1}>
+          <button type='submit' tabIndex={0}>
             Add
           </button>
         </div>
