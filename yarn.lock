@@ -1660,28 +1660,28 @@
     schema-utils "^4.2.0"
     source-map "^0.7.3"
 
-"@preact/signals-core@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@preact/signals-core/-/signals-core-1.6.1.tgz#d9ce4e6806be22325e569dd9fee06b6b41eb3bee"
-  integrity sha512-KXEEmJoKDlo0Igju/cj9YvKIgyaWFDgnprShQjzimUd5VynAAdTWMshawEOjUVeKbsI0aR58V6WOQp+DNcKApw==
+"@preact/signals-core@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@preact/signals-core/-/signals-core-1.7.0.tgz#3ffb886bfac80ff14dac365dd09184a289a2e64c"
+  integrity sha512-bEZLgmJGSBVP5PUPDowhPW3bVdMmp9Tr5OEl+SQK+8Tv9T7UsIfyN905cfkmmeqw8z4xp8T6zrl4M1uj9+HAfg==
 
-"@preact/signals-react-transform@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@preact/signals-react-transform/-/signals-react-transform-0.3.1.tgz#51274d8f6fe66e9b16938e4ba64f5ab71181db25"
-  integrity sha512-30wip3FKvXciDlUpd3XkGu+HOCYKV9GD4W3ELDceqK1OWysjryph/pbKW+ZcAVx5WzQTFcdkobhP+AjN6piauw==
+"@preact/signals-react-transform@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@preact/signals-react-transform/-/signals-react-transform-0.3.2.tgz#e8bb5d3531dff0ea048ae0a809c19c75ad7d4611"
+  integrity sha512-pWmcMwc/BKa70Py5j24FgO1/uZkYmmN0hUdK5xiQ867diSs/7mzGFCcW/Noq71YLBGVacLwPfMrWvALnuPWVFg==
   dependencies:
     "@babel/helper-module-imports" "^7.22.5"
     "@babel/helper-plugin-utils" "^7.22.5"
-    "@preact/signals-react" "^2.0.1"
+    "@preact/signals-react" "^2.1.0"
     debug "^4.3.4"
     use-sync-external-store "^1.2.0"
 
-"@preact/signals-react@^2.0.1":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@preact/signals-react/-/signals-react-2.0.2.tgz#6eabb36b4facdf4f1d8b4df127e3531bf0ffa1f3"
-  integrity sha512-JcqkrRJtYmSlVy89DL65ruFEGv4rTreQWVE/fmGQ+FtN86TaYUcwIesE4lR6IkuX33ZpGjdoh8a+0auDePD5UA==
+"@preact/signals-react@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@preact/signals-react/-/signals-react-2.1.0.tgz#4555eb9d02aad2802eaa733619ebd481e086b940"
+  integrity sha512-jWq2ldDWXdbKpg+aMGuOZfj9tS5JkVlGJ5hGNzNe1Zfe7RLFfvldBEfNe6ZT7KZddecAxKhyoxSsEypgbfx/Gw==
   dependencies:
-    "@preact/signals-core" "^1.6.1"
+    "@preact/signals-core" "^1.7.0"
     use-sync-external-store "^1.2.0"
 
 "@rollup/plugin-babel@^5.2.0":
@@ -2049,10 +2049,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^20.14.9":
-  version "20.14.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.9.tgz#12e8e765ab27f8c421a1820c99f5f313a933b420"
-  integrity sha512-06OCtnTXtWOZBJlRApleWndH4JsRVs1pDCc8dLSQp+7PpUpX3ePdHyeNSFTeSe7FtKyQkrlPvHwJOW3SLd8Oyg==
+"@types/node@^20.14.10":
+  version "20.14.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.10.tgz#a1a218290f1b6428682e3af044785e5874db469a"
+  integrity sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==
   dependencies:
     undici-types "~5.26.4"
 
