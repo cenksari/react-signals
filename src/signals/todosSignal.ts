@@ -25,9 +25,9 @@ export const changeTodosSignal = (todo: ITodo, checked: boolean): void => {
 };
 
 export const completedTodos: ReadonlySignal<ITodo[]> = computed(() =>
-  todosSignal.value.filter((todo: ITodo) => todo.isDone === true)
+  todosSignal.value.filter((todo: ITodo) => todo.isDone)
 );
 
 export const uncompletedTodos: ReadonlySignal<ITodo[]> = computed(() =>
-  todosSignal.value.filter((todo: ITodo) => todo.isDone === false)
+  todosSignal.value.filter((todo: ITodo) => !todo.isDone)
 );
