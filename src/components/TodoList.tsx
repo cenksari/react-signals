@@ -2,10 +2,13 @@ import React from 'react';
 
 import { useSignals } from '@preact/signals-react/runtime';
 
+// components
 import TodoItem from './TodoItem';
 
+// types && utils
 import { type ITodo, completedTodos, uncompletedTodos } from '../signals/todosSignal';
 
+// interfaces
 interface IProps {
   title: string;
   todos: string;
@@ -16,6 +19,11 @@ const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
 
   console.log('TodoList rendered with title', title);
 
+  /**
+   * Retrieves the list of todos based on the specified filter.
+   *
+   * @returns {ITodo[]} The list of todos filtered by completion status.
+   */
   const getTodos = (): ITodo[] =>
     todos === 'completed' ? completedTodos.value : uncompletedTodos.value;
 

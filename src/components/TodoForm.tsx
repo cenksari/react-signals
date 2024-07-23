@@ -2,6 +2,7 @@ import React, { type FormEvent } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
+// types && utils
 import { type ITodo, todosSignal, updateTodosSignal } from '../signals/todosSignal';
 
 const TodoForm = (): React.JSX.Element => {
@@ -13,10 +14,23 @@ const TodoForm = (): React.JSX.Element => {
     isDone: false,
   });
 
+  /**
+   * Handles the change event for the input field in the TodoForm.
+   * Updates the state with the new value of the input field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event object.
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setValues({ ...values, name: e.target.value });
   };
 
+  /**
+   * Handles the submission of the TodoForm.
+   * Prevents the default form submission behavior, checks if the todo name is not empty,
+   * creates a new todo object, resets the form state, and updates the todosSignal with the new todo.
+   *
+   * @param {FormEvent<HTMLFormElement>} e - The form submission event object.
+   */
   const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 

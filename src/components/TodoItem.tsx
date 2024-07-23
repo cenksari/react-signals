@@ -1,7 +1,9 @@
 import React from 'react';
 
+// types && utils
 import { type ITodo, changeTodosSignal } from '../signals/todosSignal';
 
+// interfaces
 interface IProps {
   todo: ITodo;
 }
@@ -9,6 +11,12 @@ interface IProps {
 const TodoItem = ({ todo }: IProps): React.JSX.Element => {
   console.log('TodoItem rendered with todo', todo);
 
+  /**
+   * Handles the change event for the checkbox input.
+   * Updates the todo's isDone status based on the checkbox's checked state.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event object.
+   */
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     changeTodosSignal(todo, e.target.checked);
   };
