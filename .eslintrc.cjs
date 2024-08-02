@@ -18,7 +18,9 @@ module.exports = {
     'no-console': 'off',
     'prettier/prettier': 'error',
     'react/require-default-props': 'off',
+    '@typescript-eslint/no-throw-literal': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
+    '@typescript-eslint/lines-between-class-members': 'off',
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
   },
 };

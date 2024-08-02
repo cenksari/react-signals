@@ -6,10 +6,10 @@ With React Signals, you can effortlessly create, manage, and subscribe to signal
 
 By leveraging the power of React Signals, you can:
 
-* Simplify state management across your application
-* Enhance performance by reducing unnecessary re-renders
-* Improve code readability and maintainability
-* Streamline debugging and error handling
+- Simplify state management across your application
+- Enhance performance by reducing unnecessary re-renders
+- Improve code readability and maintainability
+- Streamline debugging and error handling
 
 ## Support this project
 
