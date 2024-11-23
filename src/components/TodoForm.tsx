@@ -1,14 +1,14 @@
-import React, { type FormEvent } from 'react';
+import { useState } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
 // types && utils
 import { type ITodo, todosSignal, updateTodosSignal } from '../signals/todosSignal';
 
-const TodoForm = (): React.JSX.Element => {
+const TodoForm = (): JSX.Element => {
   console.log('TodoForm rendered');
 
-  const [values, setValues] = React.useState<ITodo>({
+  const [values, setValues] = useState<ITodo>({
     id: '',
     name: '',
     isDone: false,
@@ -29,9 +29,9 @@ const TodoForm = (): React.JSX.Element => {
    * Prevents the default form submission behavior, checks if the todo name is not empty,
    * creates a new todo object, resets the form state, and updates the todosSignal with the new todo.
    *
-   * @param {FormEvent<HTMLFormElement>} e - The form submission event object.
+   * @param {React.FormEvent<HTMLFormElement>} e - The form submission event object.
    */
-  const handleAddTodo = (e: FormEvent<HTMLFormElement>): void => {
+  const handleAddTodo = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     const { name } = values;

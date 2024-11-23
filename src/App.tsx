@@ -1,12 +1,10 @@
-import React from 'react';
-
 // components
 import Header from './components/Header';
 import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
-const App = (): React.JSX.Element => {
+const App = (): JSX.Element => {
   console.log('App rendered');
 
   return (

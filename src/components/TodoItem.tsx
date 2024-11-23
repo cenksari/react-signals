@@ -1,5 +1,3 @@
-import React from 'react';
-
 // types && utils
 import { type ITodo, changeTodosSignal } from '../signals/todosSignal';
 
@@ -8,7 +6,7 @@ interface IProps {
   todo: ITodo;
 }
 
-const TodoItem = ({ todo }: IProps): React.JSX.Element => {
+const TodoItem = ({ todo }: IProps): JSX.Element => {
   console.log('TodoItem rendered with todo', todo);
 
   /**

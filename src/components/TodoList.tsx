@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSignals } from '@preact/signals-react/runtime';
 
 // components
@@ -14,7 +12,7 @@ interface IProps {
   todos: string;
 }
 
-const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
+const TodoList = ({ title, todos }: IProps): JSX.Element => {
   useSignals();
 
   console.log('TodoList rendered with title', title);
@@ -32,7 +30,7 @@ const TodoList = ({ title, todos }: IProps): React.JSX.Element => {
       <h1>{title}</h1>
       <div className='todos'>
         {getTodos().length > 0 ? (
-          getTodos().map((todo: ITodo): React.JSX.Element => <TodoItem todo={todo} key={todo.id} />)
+          getTodos().map((todo: ITodo): JSX.Element => <TodoItem todo={todo} key={todo.id} />)
         ) : (
           <p>No todos found in {title.toLowerCase()} todos!</p>
         )}

@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Header = (): React.JSX.Element => {
+const Header = (): JSX.Element => {
   console.log('Header rendered');
 
   return <header>React Signals</header>;
