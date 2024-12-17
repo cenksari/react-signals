@@ -1,4 +1,4 @@
-const Header = (): JSX.Element => {
+const Header: React.FC = () => {
   console.log('Header rendered');
 
   return <header>React Signals</header>;

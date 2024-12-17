@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 // types && utils
 import { type ITodo, todosSignal, updateTodosSignal } from '../signals/todosSignal';
 
-const TodoForm = (): JSX.Element => {
+const TodoForm: React.FC = () => {
   console.log('TodoForm rendered');
 
   const [values, setValues] = useState<ITodo>({

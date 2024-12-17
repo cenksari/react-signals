@@ -6,7 +6,7 @@ interface IProps {
   todo: ITodo;
 }
 
-const TodoItem = ({ todo }: IProps): JSX.Element => {
+const TodoItem: React.FC<IProps> = ({ todo }) => {
   console.log('TodoItem rendered with todo', todo);
 
   /**

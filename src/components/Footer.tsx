@@ -1,4 +1,4 @@
-const Footer = (): JSX.Element => {
+const Footer: React.FC = () => {
   console.log('Footer rendered');
 
   return <footer>React Signals</footer>;

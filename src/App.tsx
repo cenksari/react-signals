@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
-const App = (): JSX.Element => {
+const App: React.FC = () => {
   console.log('App rendered');
 
   return (

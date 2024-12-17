@@ -12,7 +12,7 @@ interface IProps {
   todos: string;
 }
 
-const TodoList = ({ title, todos }: IProps): JSX.Element => {
+const TodoList: React.FC<IProps> = ({ title, todos }) => {
   useSignals();
 
   console.log('TodoList rendered with title', title);
@@ -30,7 +30,7 @@ const TodoList = ({ title, todos }: IProps): JSX.Element => {
       <h1>{title}</h1>
       <div className='todos'>
         {getTodos().length > 0 ? (
-          getTodos().map((todo: ITodo): JSX.Element => <TodoItem todo={todo} key={todo.id} />)
+          getTodos().map((todo: ITodo) => <TodoItem todo={todo} key={todo.id} />)
         ) : (
           <p>No todos found in {title.toLowerCase()} todos!</p>
         )}
